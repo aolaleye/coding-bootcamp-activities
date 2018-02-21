@@ -1,0 +1,32 @@
+body {
+    margin: 0 20em;
+}
+
+#fixed {
+    background: #eee;
+    padding: 40px;
+    height: 80px;
+    width: 120px;
+    position: fixed;
+    top: 5px;
+    left: 145px;
+    z-index: 2;
+    text-align: center;
+}
+
+#relative {
+    background: #eee;
+    padding: 80px;
+    position: relative;
+    text-align: center;
+}
+
+#absolute {
+    background: #999;
+    padding: 40px;
+    position: absolute;
+    bottom: 270px;
+    right: 290px;
+    z-index: 2;
+    text-align: center;
+}

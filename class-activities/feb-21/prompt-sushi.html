@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sushi Prompt - Unsolved</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    // Write code here!
+    var likesSushi;
+    var kindOfSushi;
+      
+    // Program 1  
+    // likesSushi = confirm("Do you like sushi?");
+    // if (likesSushi==true) { 
+    //   alert("I like sushi too!");
+    //   kindOfSushi = prompt("What kind of sushi do you like?");
+    //   alert("I like " + kindOfSushi + " too!");
+    // } else {
+    //   alert("Why not? Sushi is good!");
+    // }
+
+    // Program 2
+    likesSushi = confirm("Do you like sushi?");
+    if (likesSushi) {
+      print("I like sushi too!");
+      kindOfSushi = prompt("What kind of sushi do you like?");
+      if (kindOfSushi === true) {
+      alert("I like " + kindOfSushi + " too!");
+      } else {
+        var kindOfSushi2 = prompt("ANSWER ME. What kind of sushi do you like?");
+        if (kindOfSushi2 === true) {
+        alert("I like " + kindOfSushi2 + " too!");
+        } else {
+        alert("Since you didn't answer the question, we can't compare sushi preferences.");
+        }
+      } 
+    } else {
+      alert("Why not? Sushi is good!");
+    }
+
+    
+    
+
+    </script>
+
+  </body>
+</html>

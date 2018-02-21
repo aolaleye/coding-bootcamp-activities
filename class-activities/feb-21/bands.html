@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Array Activity - Unsolved</title>
+  </head>
+  <body>
+
+    <h1>Favorite Band!</h1>
+
+    <script type="text/javascript">
+
+    var bandsArray = ["coldplay", "beatles", "egyptians", "vibrations"];
+    var userFavorite = prompt("What is your favorite band?");
+    var indexOfFavorite = bandsArray.indexOf(userFavorite);
+
+    if (indexOfFavorite < 0) {
+        alert("Nah. " + userFavorite + " is pretty lame.");
+    } else {
+        alert("Yeah I love " + userFavorite + " too!");
+    }
+
+    </script>
+
+  </body>
+</html>

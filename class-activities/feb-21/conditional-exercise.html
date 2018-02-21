@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    var eatsSteak;    
+    var birthYear;
+
+    eatsSteak = confirm("Do you eat steak?");
+    if (eatsSteak) {
+        document.write("Here's a Steak Sandwich!");
+    } else {
+        document.write("Here's a Tofu Stir-Fry!");
+    }
+
+    birthYear = prompt("What year were you born?");
+    if (parseInt(birthYear) > 1997) {
+        alert("No Sake for you!");
+    } else {
+        alert ("Have some Sake!");
+    }
+    
+    </script>
+
+  </body>
+</html>
