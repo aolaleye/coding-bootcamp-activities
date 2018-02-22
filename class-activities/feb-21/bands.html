@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Array Activity - Unsolved</title>
+    <title>Bands Activity - Unsolved</title>
   </head>
   <body>
 
@@ -12,7 +12,7 @@
 
     var bandsArray = ["coldplay", "beatles", "egyptians", "vibrations"];
     var userFavorite = prompt("What is your favorite band?");
-    var indexOfFavorite = bandsArray.indexOf(userFavorite);
+    var indexOfFavorite = bandsArray.indexOf(userFavorite.toLowerCase());
 
     if (indexOfFavorite < 0) {
         alert("Nah. " + userFavorite + " is pretty lame.");
