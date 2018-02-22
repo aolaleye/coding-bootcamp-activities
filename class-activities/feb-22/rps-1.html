@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 1</title>
+</head>
+
+<body>
+
+  <span>Type r, p, or s</span>
+  <div id="game">
+    <p>The computer played: <span id="computer-text"><strong></strong></span></p>
+    <p>You played: <span id="user-text"><strong></strong></span></p>
+  </div>
+
+
+  <script type="text/javascript">
+  var computerText = document.getElementById("computer-text");
+  var userText = document.getElementById("user-text");
+  var computerOptions = ["r", "p", "s"];
+  var wins = 0;
+  var ties = 0;
+  var losses = 0;
+  
+  function computerChoice() {
+    computerOptions[Math.floor(Math.random() * computerOptions.length)];
+    computerText.textContent = number;
+  };
+  computerChoice();
+  
+  
+  if (userText === "r" && computerText === "r") {
+    ties=+1;
+  } else if (userText === "p" && computerText === "p") {
+    ties=+1;
+  } else if (userText === "s" && computerText === "s") {
+    ties=+1;
+  } else if (userText === "r" && computerText === "p") {
+    losses=+1;
+  } else if (userText === "r" && computerText === "s") {
+    wins=+1;
+  } else if (userText === "p" && computerText === "r") {
+    wins=+1;
+  } else if (userText === "p" && computerText === "s") {
+    losses=+1;
+  } else if (userText === "s" && computerText === "r") {
+    losses=+1;
+  } else if (userText === "s" && computerText === "p") {
+    wins=+1;
+  } 
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
