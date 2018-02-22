@@ -9,19 +9,21 @@
     <h1>Open the console to see the magic!</h1>
 
     <script>
+      function logArray(arr) {
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+      }
 
       // Array of zoo animals.
       var zooAnimals = ["Zebra", "Rhino", "Giraffe", "Owl"];
+      var friends = ["Sam", "Louis", "Jenn"];
 
       // Rewrite the following code to print all of the animals using a for-loop.
-      for (var i = 0; i < zooAnimals.length; i++) {
-        console.log(zooAnimals[i]);
-      }
+      logArray(zooAnimals);
+      logArray(friends);
 
-      // console.log(zooAnimals[0]);
-      // console.log(zooAnimals[1]);
-      // console.log(zooAnimals[2]);
-      // console.log(zooAnimals[3]);
+   
 
     </script>
     
