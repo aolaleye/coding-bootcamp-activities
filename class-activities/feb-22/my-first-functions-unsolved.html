@@ -23,14 +23,14 @@
       // Create a Function called "multiplier" that takes three arguments (x, y, z).
       // The function should multiply the arguments, and log the result to the console.
       function multiplier(x, y, z) {
-        console.log(x * y () z);
+        console.log(x * y * z);
       }
 
 
       // Create a Function called "isString" that takes three arguments (x, y, z).
       // "isString" determines if all three arguments are strings and logs an appropriate response to the console.
       function isString(x, y, z) {
-        if (x === 'string' && y === 'string' && z === 'string') {
+        if (typeof x === 'string' && typeof y === 'string' && typeof z === 'string') {
           console.log("isString");
         } else {
           console.log("isNotString")
@@ -41,8 +41,13 @@
       // Create a Function called "vowelChecker" that takes in a single argument (x).
       // "vowlChecker" logs whether or not the input is a vowel.
       function vowelChecker(x) {
+        var firstChar = x.toLowerCase().charAt(0) //points to the first letter
         var vowel = ["a", "e", "i", "o", "u"]
-        if (x.toLowerCase() === vowel[0] || x.toLowerCase() === vowel[1] || x.toLowerCase() === vowel[2] || x.toLowerCase() === vowel[3] || x.toLowerCase() === vowel[4]) {
+        if (firstChar === vowel[0] 
+            || firstChar === vowel[1] 
+            || firstChar === vowel[2] 
+            || firstChar === vowel[3] 
+            || firstChar === vowel[4]) {
           console.log("isVowel");
         } else {
           console.log("isNotVowel");
