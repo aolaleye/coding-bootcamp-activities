@@ -23,9 +23,13 @@
       // Notice I have the click, #click-me, and then the function
       // So action, id|class|element, function
       // And so whenever it is clicked...
-      $("body").on("click", "#click-me", function () {
+      $("body").on("click", "#click-me", function() {
         alert("I've been clicked!");
       });
+
+      $(document).on("click", "#click-me", function() {
+        alert("I've been clicked ");
+      })
 
     });
 

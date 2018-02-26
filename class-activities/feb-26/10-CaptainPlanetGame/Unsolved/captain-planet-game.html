@@ -63,6 +63,34 @@
           </div>
         </div>
 
+        <!-- Controls (Change Character) -->
+        <div id="characterControls" class="card">
+          <h4 class="card-header">Superpowers - Change Character!</h4>
+          <div class="card-body">
+            <div class="text-center">
+              <button class="btn btn-dark btn-lg cp-button">
+                  <span class="glyphicon glyphicon-eye-open"></span> Captain Planet</button>
+              <button class="btn btn-dark btn-lg superman-button">
+                <span class="glyphicon glyphicon-eye-open"></span> Superman</button>
+              <button class="btn btn-info btn-lg spiderman-button">
+                <span class="glyphicon glyphicon-eye-close"></span> Spiderman</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls (Power to Control Elements) -->
+        <div id="powerControls" class="card">
+          <h4 class="card-header">Superpowers - Power to Control Elements Around!</h4>
+          <div class="card-body">
+            <div class="text-center">
+              <button class="btn btn-dark btn-lg slideup-button">
+                <span class="glyphicon glyphicon-eye-open"></span> Slide Up</button>
+              <button class="btn btn-info btn-lg slidedown-button">
+                <span class="glyphicon glyphicon-eye-close"></span> Slide Down</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Controls (Superpower Move Controls) -->
         <div id="moveControls" class="card">
           <h4 class="card-header">Move Controls</h4>
@@ -88,7 +116,9 @@
       <div class="col-lg-6">
 
         <!-- Captain Planet Image -->
-        <img src="Assets/captain-planet.jpg" alt="" class="img captain-planet" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px">
+        <img src="Assets/captain-planet.jpg" alt="" class="img captain-planet" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px;">
+        <img src="Assets/superman.png" alt="" class="img superman-img" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px; display: none;">
+        <img src="Assets/spiderman.png" alt="" class="img spiderman-img" style="position:absolute; top:50px; left: 80px; z-index: -20; height: 300px; display: none;">
       </div>
     </div>
   </div>
@@ -98,7 +128,7 @@
   // JavaScript function that wraps everything
   $(document).ready(function () {
 
-    var captainPlanet = $('.captain-planet');
+    var captainPlanet = $('img');
 
     // Gets Link for Theme Song
     var audioElement = document.createElement('audio');
@@ -132,6 +162,28 @@
 
     $('.invis-button').on('click', function () {
       captainPlanet.animate({ opacity: '0.05' });
+    });
+
+    // Character Buttons
+    $('#characterControls').on('click', '.cp-button', function () {
+      $('.captain-planet').show();
+      $('.superman-img').hide();
+      $('.spiderman-img').hide();
+    }).on('click', '.superman-button', function () {
+      $('.captain-planet').hide();
+      $('.spiderman-img').hide();
+      $('.superman-img').show();
+    }).on('click', '.spiderman-button', function () {
+      $('.captain-planet').hide();
+      $('.superman-img').hide();
+      $('.spiderman-img').show();
+    });
+
+    // Power to Control Buttons
+    $('#powerControls').on('click', '.slideup-button', function () {
+      $('.jumbotron').slideUp();
+    }).on('click', '.slidedown-button', function () {
+      $('.jumbotron').slideDown();
     });
 
     // Move Buttons

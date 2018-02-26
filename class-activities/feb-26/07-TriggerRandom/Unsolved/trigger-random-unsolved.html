@@ -18,17 +18,16 @@
     <h1 class="text-center">Generate a Random Number!</h1>
 
     <div class="text-center">
-
+      
       <!-- Here we have our button for generating random numbers (#random-button) -->
       <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="glyphicon glyphicon-question-sign"></span></h1></button>
       
     </div>
-
   </div>
 
   <!-- Here we have div called "random-number" where our random number will go -->
-  <h1 class="text-center" id="random-number"></h1>
-
+  <h1 class="text-center" id="random-number"><ul class="list" style="list-style: none;"></ul></h1>
+  
   <script type="text/javascript">
 
     $(document).ready(function() {
@@ -36,8 +35,20 @@
       // CREATE THE MISSING CODE HERE. Your code should add content to the random-number div.
       // ...
 
+      $(".jumbotron").on("click", "#random-button", function() {
+      var lotteryNumber = "";
+      
+        for(i = 1; i < 10; i++) {
+        var randomNumber = (Math.floor(Math.random() * 9) + 1)
+        lotteryNumber += randomNumber;
+        }
+        $(".list").prepend('<li>' + lotteryNumber + '</li>');
+      });
+
+       // $(".list").prepend('<li>' + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + (Math.floor(Math.random() * 9) + 1) + '</li>');
 
       // ...
+  
 
     });
 
