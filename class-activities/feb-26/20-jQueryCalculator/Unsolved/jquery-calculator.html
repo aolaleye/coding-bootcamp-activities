@@ -5,7 +5,7 @@
     <title>jQuery Calculator</title>
 
     <!-- Added link to the jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <!-- Added a link to Bootstrap-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -75,10 +75,71 @@
 
 $(document).ready(function(){
 
+//global variables
+var firstNumberArray = [];
+var secondNumberArray = [];
+var firstNumber = "";
+var secondNumber = "";
+var operator;
+var result;  
+var numberValue;
+var isOperatorHit = false;
+var resultGiven = false;
+
+
 // Your code here...
 
+$(".operator").on("click", function() {
+  if (resultGiven === false) {
+  operator = $(this).val();
+  $("#operator").html($(this).text());
+  isOperatorHit = true;
+  }
+})
 
-});
+$(".number").on("click", function() {
+  numberValue = $(this).val();
+      if (isOperatorHit === true && resultGiven === false) {
+      $("#second-number").append(numberValue);
+      secondNumberArray.push(numberValue);
+      for (i = 0; i < secondNumberArray.length; i++) {
+        secondNumber = secondNumberArray.join('');
+      }
+  } else if (isOperatorHit === false && resultGiven === false) {
+      $("#first-number").append(numberValue);
+      firstNumberArray.push(numberValue);
+      for (i = 0; i < firstNumberArray.length; i++) {
+        firstNumber = firstNumberArray.join('');
+      }
+    }
+})
+
+$(".equal").on("click", function() {
+  if (operator === "minus") {
+  result = parseInt(firstNumber) - parseInt(secondNumber);
+  } else if (operator === "plus") {
+  result = parseInt(firstNumber) + parseInt(secondNumber);
+  } else if (operator === "times") {
+  result = parseInt(firstNumber) * parseInt(secondNumber);
+  } else if (operator === "divide") {
+  result = parseInt(firstNumber)/parseInt(secondNumber);  
+  }
+  $("#result").append(result);
+  resultGiven = true;
+})
+
+$(".clear").on("click", function() {
+  isOperatorHit = false;
+  resultGiven = false;
+  firstNumberArray = [];
+  secondNumberArray = [];
+  $("#first-number").empty()
+  $("#operator").empty()
+  $("#second-number").empty()
+  $("#result").empty()
+})
+
+});// <--- end document.ready
 
 </script>
 
