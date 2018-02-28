@@ -1,0 +1,17 @@
+body {
+    background-image: url("https://cdn-images-1.medium.com/max/1600/0*TUSZY4fTeqVEyu0T.gif
+ https://cdn-images-1.medium.com/max/1600/0*TUSZY4fTeqVEyu0T.gif
+ ");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    color: rgb(185, 40, 35);
+    font-size: 30px;
+    font-family: 'Bungee Inline', cursive;
+ }
+ 
+ p {
+    margin-right: 60%;
+    padding: 20px;
+    margin: 20px; 
+ }
