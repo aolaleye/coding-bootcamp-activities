@@ -35,13 +35,15 @@ var stopwatch = {
 
     //  TODO: Use setInterval to start the count here and set the clock to running.
     if (!clockRunning) {
-
+      intervalId = setInterval(stopwatch.count, 1000);
+      clockRunning = true;
     }
 
   },
   stop: function() {
 
     //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
+    clearInterval(intervalId);
 
   },
 
@@ -54,8 +56,17 @@ var stopwatch = {
 
     //  TODO: Increment lap by 1. Remember, we can't use "this" here.
   },
+ 
   count: function() {
 
+    stopwatch.time++;
+
+    var converted = stopwatch.timeConverter(stopwatch.time);
+    console.log(converted);
+
+    $("#display").text(converted);
+
+  
     //  TODO: increment time by 1, remember we cant use "this" here.
 
     //  TODO: Get the current time, pass that into the stopwatch.timeConverter function,

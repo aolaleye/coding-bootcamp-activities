@@ -33,6 +33,9 @@
     $("#resume").on("click", run);
 
     function run() {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
       intervalId = setInterval(decrement, 1000);
     }
 
