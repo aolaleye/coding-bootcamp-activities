@@ -68,9 +68,29 @@ var unsortedArr = [
   181, 485, 495, 81, 169, 294, 79, 400, 92, 104, 249
 ];
 
-document.getElementById('#start').innerHTML(unsortedArr[0]);
-// document.getElementById('#go').onclick = function () {
+document.getElementById("start").textContent = unsortedArr.join(", ");
 
+function bubbleSort(arr) {
+  var sorted = false;
+  
+  while (!sorted) {
+    sorted = true;
 
-// };
-// document.getElementById('#result');
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        sorted = false;
+        var temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
+document.getElementById("go").addEventListener("click", function() {
+  var sortedArr = bubbleSort(unsortedArr);
+  document.getElementById("result").textContent = unsortedArr.join(", ");
+})
+
