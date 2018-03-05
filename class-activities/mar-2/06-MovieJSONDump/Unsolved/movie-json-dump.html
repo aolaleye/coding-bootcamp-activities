@@ -45,7 +45,16 @@
 
         // =================================================================
 
-        // CODE GOES HERE
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+          console.log(response);
+          $("#movie-view").text(JSON.stringify(response));
+        });
+
+        //turn object into string JSON.stringify 
+        //turn string back into an object JSON.parse()
 
         // =================================================================
       });

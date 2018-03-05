@@ -38,7 +38,9 @@
       // Generic function for capturing the movie name from the data-attribute
       function alertMovieName() {
 
-        // YOUR CODE GOES HERE!!!
+        $(".movie").click(function() {
+          alert($(".movie").data("name"));
+        })
 
       }
 
