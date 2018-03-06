@@ -36,6 +36,12 @@
       // Initial array of movies
       var movies = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
 
+      function alertMovieName() {
+
+        alert($(this).attr("data-name"));
+
+      }
+
       // Function for displaying movie data
       function renderButtons() {
 
@@ -65,6 +71,8 @@
         // The renderButtons function is called, rendering the list of movie buttons
         renderButtons();
       });
+
+       $(document).on("click", ".movie", alertMovieName);
 
       // Calling the renderButtons function to display the initial list of movies
       renderButtons();
