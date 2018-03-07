@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <title>NY Times Search App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: darkblue;">
+        <div class="container">
+            <h1 class="display-4" style="color: #fff;">New York Times Search</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group row">
+                <label for="text-input" class="col-2 col-form-label">Search</label>
+                <div class="col-12">
+                    <input class="form-control" type="text" value="" id="search-input" placeholder="Enter search term here...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="selector-input">Number of Articles</label>
+                <select class="form-control" id="selectField" id="selector-input">
+                    <option class="number" id="1" value="1">1</option>
+                    <option class="number" id="5" value="5">5</option>
+                    <option class="number" id="10" value="10">10</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label id="begin-input" class="col-2 col-form-label">Start Year (Optional)</label>
+                <div class="col-12">
+                    <input class="form-control beginDate" type="" value="" id="number-input" placeholder="YYYYMMDD">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="end-input" class="col-2 col-form-label">End Year (Optional)</label>
+                <div class="col-12">
+                    <input class="form-control endDate" type="" value="" id="number-input" placeholder="YYYYMMDD">
+                </div>
+            </div>
+            <span>
+                <button type="submit" class="btn btn-primary searchButton">Search</button>
+                <button type="submit" class="btn btn-primary clearButton">Clear Results</button>
+            </span>
+        </form>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                Top Articles
+            </div>
+            <div class="card-body" class="print-articles">
+                <div class="print"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="new.js"></script>
+</body>
+
+</html>
