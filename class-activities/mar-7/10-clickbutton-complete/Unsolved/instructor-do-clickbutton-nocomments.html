@@ -6,43 +6,46 @@
     <meta charset="UTF-8">
     <title>Click Button with Firebase!</title>
 
-    <!-- -->
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- Firebase JS link -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 
   </head>
 
   <body>
 
-    <!-- -->
+    <!-- clickCounter value inserted here -->
     <h1>Ouch! You've clicked me <span id="click-value"></span> times!</h1>
 
-    <!-- -->
+    <!-- Click Button -->
     <button id="click-button">Click Me!!!!</button>
 
-    <!-- -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- ================================================================================== -->
     <script>
-
-    var config = {
-      apiKey: "AIzaSyAJS4YQWU5DmESeYueG1qH1NGkjv3DncEY",
-      authDomain: "fir-click-counter-7cdb9.firebaseapp.com",
-      databaseURL: "https://fir-click-counter-7cdb9.firebaseio.com",
-      storageBucket: "fir-click-counter-7cdb9.appspot.com"
-    };
-
-    firebase.initializeApp(config);
+    // Initialize Firebase
+    // var config = {
+    //   apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
+    //   authDomain: "clickbutton-55b0c.firebaseapp.com",
+    //   databaseURL: "https://clickbutton-55b0c.firebaseio.com",
+    //   projectId: "clickbutton-55b0c",
+    //   storageBucket: "clickbutton-55b0c.appspot.com",
+    //   messagingSenderId: "941233784805"
+    // };
+    // firebase.initializeApp(config);
 
     // VARIABLES
     // --------------------------------------------------------------------------------
-
+    // set database
+    // set click counter to zero
     var database = firebase.database();
     var clickCounter = 0;
 
     // FUNCTIONS + EVENTS
     // --------------------------------------------------------------------------------
-
+    //on click the click counter increments by one
+    //the information is set to the database location we set
     $("#click-button").on("click", function() {
       clickCounter++;
       database.ref().set({
@@ -52,7 +55,7 @@
 
     // MAIN PROCESS + INITIAL CODE
     // --------------------------------------------------------------------------------
-
+    //it's taking the value of the clickcounter and putting it into the specified div
     database.ref().on("value", function(snapshot) {
       console.log(snapshot.val());
       $("#click-value").text(snapshot.val().clickCount);

@@ -85,10 +85,23 @@
     //  START CODING BELOW!!
 
     // Initialize Firebase
-
+    var config = {
+      apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
+      authDomain: "clickbutton-55b0c.firebaseapp.com",
+      databaseURL: "https://clickbutton-55b0c.firebaseio.com",
+      projectId: "clickbutton-55b0c",
+      storageBucket: "clickbutton-55b0c.appspot.com",
+      messagingSenderId: "941233784805"
+    };
+    firebase.initializeApp(config);
 
     // Create a variable to reference the database
-
+    var database = firebase.database();
+    
+    var name = "";
+    var email = "";
+    var age = "";   
+    var comment = "";
 
     // Capture Button Click
     $("#add-user").on("click", function() {
@@ -96,6 +109,18 @@
       event.preventDefault();
 
       // YOUR TASK!!!
+
+      name = $("#name-input").val().trim();
+      email = $("#email-input").val().trim();
+      age = $("#age-input").val().trim();
+      comment = $("#comment-input").val().trim();
+
+      database.ref().set({
+        name: name,
+        email: email,
+        age: age,
+        comment: comment
+      });
 
       // Code in the logic for storing and retrieving the most recent user.
 
@@ -105,7 +130,24 @@
 
 
     // Firebase watcher + initial loader HINT: .on("value")
+    database.ref().on("value", function(snapshot){
+      var newVal = snapshot.val();
 
+      console.log(newVal);
+      
+      console.log(newVal.name);
+      console.log(newVal.email);
+      console.log(newVal.age);
+      console.log(newVal.comment);
+
+      $("#name-display").text(newVal.name);
+      $("#email-display").text(newVal.email);
+      $("#age-display").text(newVal.age);
+      $("#comment-display").text(newVal.comment);
+
+    }, function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
 
     // Create Error Handling
   </script>

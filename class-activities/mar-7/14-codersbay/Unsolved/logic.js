@@ -1,7 +1,15 @@
 // Initialize Firebase
 // Make sure to match the configuration to the script version number in the HTML
 // (Ex. 3.0 != 3.7.0)
-
+var config = {
+  apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
+  authDomain: "clickbutton-55b0c.firebaseapp.com",
+  databaseURL: "https://clickbutton-55b0c.firebaseio.com",
+  projectId: "clickbutton-55b0c",
+  storageBucket: "clickbutton-55b0c.appspot.com",
+  messagingSenderId: "941233784805"
+};
+firebase.initializeApp(config);
 
 // Assign the reference to the database to a variable named 'database'
 // var database = ...
@@ -11,7 +19,7 @@
 var initialBid = 0;
 var initialBidder = "No one :-(";
 var highPrice = initialBid;
-var highBidder = initialBidder;
+var highBidder = initialBidder; 
 
 // --------------------------------------------------------------
 
@@ -60,7 +68,8 @@ $("#submit-bid").on("click", function(event) {
   event.preventDefault();
 
   // Get the input values
-
+  var bidderName = $("bidder-name").val().trim();
+  var bidderPrice = $("bidder-price").val().trim();
 
   // Log the Bidder and Price (Even if not the highest)
   if (bidderPrice > highPrice) {

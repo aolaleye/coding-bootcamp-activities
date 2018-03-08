@@ -8,7 +8,8 @@
   <title>Sign-Up Today!</title>
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
 
 </head>
 
@@ -84,17 +85,42 @@
     // ========================================= START CODING BELOW!!
 
     // Capture Button Click
-    $("#add-user").on("click", function(event) {
+    $("#add-user").on("click", function (event) {
       event.preventDefault();
 
       // Capture User Inputs and store them into variables
-
+      var name = $("#name-input").val().trim();
+      var email = $("#email-input").val().trim();
+      var age = $("#age-input").val().trim();
+      var comment = $("#comment-input").val().trim();
 
       // Console log each of the user inputs to confirm we are receiving them correctly
+      console.log(name);
+      console.log(email);
+      console.log(age);
+      console.log(comment);
+
+      localStorage.clear();
+
+      localStorage.setItem("name", name);
+      localStorage.setItem("email", email);
+      localStorage.setItem("age", age);
+      localStorage.setItem("comment", comment);
 
 
       // Output all of the new information into the relevant HTML sections
+      $("#name-display").text(localStorage.getItem("name"));
+      $("#email-display").text("Email: " + localStorage.getItem("email"));
+      $("#age-display").text("Age: " + localStorage.getItem("age"));
+      $("#comment-display").text(localStorage.getItem("comment"));
+
     });
+
+    $("#name-display").text(localStorage.getItem("name"));
+    $("#email-display").text("Email: " + localStorage.getItem("email"));
+    $("#age-display").text("Age: " + localStorage.getItem("age"));
+    $("#comment-display").text(localStorage.getItem("comment"));
+    
   </script>
 
 </body>
