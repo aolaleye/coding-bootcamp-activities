@@ -1,15 +1,18 @@
-// Initialize Firebase
-// var config = {
-//     apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
-//     authDomain: "clickbutton-55b0c.firebaseapp.com",
-//     databaseURL: "https://clickbutton-55b0c.firebaseio.com",
-//     projectId: "clickbutton-55b0c",
-//     storageBucket: "clickbutton-55b0c.appspot.com",
-//     messagingSenderId: "941233784805"
-//   };
-//   firebase.initializeApp(config);
+//moment() returns the time now
+//i.e. moment().format("DD/MM/YY h:mm a")
 
-var database =  firebase.database();
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
+    authDomain: "clickbutton-55b0c.firebaseapp.com",
+    databaseURL: "https://clickbutton-55b0c.firebaseio.com",
+    projectId: "clickbutton-55b0c",
+    storageBucket: "clickbutton-55b0c.appspot.com",
+    messagingSenderId: "941233784805"
+  };
+  firebase.initializeApp(config);
+
+var database = firebase.database();
 
 var eName = "";
 var eRole = "";
@@ -25,9 +28,7 @@ $(".submit").on("click", function() {
     eRole = $(".role").val().trim();
     eStartDate = $(".start-date").val().trim();
     eRate = $(".monthly-rate").val().trim();
-    // eMonthsWorked =
-    // eTotalBilled =
-
+    
     console.log(eName);
     console.log(eRole);
     console.log(eStartDate);
@@ -37,11 +38,34 @@ $(".submit").on("click", function() {
         name: eName,
         role: eRole,
         startDate: eStartDate,
-        rate: eRate
-    })
+        rate: eRate,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
+    });
 
-    $("tbody").append(
-    "<tr><td scope='col'>" + eName + "</td><td scope='col'>" + eRole + "</td><td scope='col'>" + eStartDate + "</td><td scope='col'>" + "test" + "</td><td scope='col'>" + eRate + "</td><td scope='col'>" + "test" + "</td></tr>");
-
+    $(".form-group input").val(null);
 
 });
+
+//gives just the added value versus the all the values
+database.ref().on("child_added", function(childSnapshot){
+
+    var snap = childSnapshot.val();
+
+    var monthsWorked = moment().diff(snap.startDate, "months");
+    var totalBilled = (monthsWorked * snap.rate);
+
+    $("tbody").append(
+        "<tr><td scope='col'>" + snap.name + "</td><td scope='col'>" + snap.role + "</td><td scope='col'>" + snap.startDate + "</td><td scope='col'>" + monthsWorked + "</td><td scope='col'>" + snap.rate + "</td><td scope='col'>" + totalBilled + "</td></tr>");
+
+},  function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
+});
+
+// dataRef.ref().orderByChild("dateAdded").limitToLast(1).on('child_added', function(snapshot) {
+
+//     var snap = snapshot.val();
+
+//     //change HTML to reflect
+//     $('#name-display').text(snap.name);
+
+// });

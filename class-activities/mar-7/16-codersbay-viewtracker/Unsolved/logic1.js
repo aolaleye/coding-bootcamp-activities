@@ -1,13 +1,13 @@
 // Initialize Firebase
-var config = {
-    apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
-    authDomain: "clickbutton-55b0c.firebaseapp.com",
-    databaseURL: "https://clickbutton-55b0c.firebaseio.com",
-    projectId: "clickbutton-55b0c",
-    storageBucket: "clickbutton-55b0c.appspot.com",
-    messagingSenderId: "941233784805"
-  };
-  firebase.initializeApp(config);
+// var config = {
+//     apiKey: "AIzaSyAbZUJtsVqAU0o6648DaF8o4evLDtsMcjI",
+//     authDomain: "clickbutton-55b0c.firebaseapp.com",
+//     databaseURL: "https://clickbutton-55b0c.firebaseio.com",
+//     projectId: "clickbutton-55b0c",
+//     storageBucket: "clickbutton-55b0c.appspot.com",
+//     messagingSenderId: "941233784805"
+//   };
+//   firebase.initializeApp(config);
   
 // Assign the reference to the database to a variable named 'database'
 // var database = ...
