@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Project</title>
+   <!-- Bootstrap CDN-->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <body>
+    <div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container ">
+            <h1 class="display-4 text-center text-light">Employee Data Management</h1>
+            <p class="lead text-center text-light">A Comprehensive Directory of Employee Billable Hours</p>
+        </div>
+    </div>
+    <div class="container">
+       <div class="row">
+           <div class="col-12">
+               <div class="card border-primary mb-3 ">
+                   <div class="card-header">Current Employee</div>
+                   <div class="card-body ">
+                       <table class="table table-hover ">
+                           <thead>
+                               <tr>
+                                   <th scope="col">Employee Name</th>
+                                   <th scope="col">Role</th>
+                                   <th scope="col">Start Date</th>
+                                   <th scope="col">Months Worked</th>
+                                   <th scope="col">Monthly Rate ($)</th>
+                                   <th scope="col">Total Billed ($)</th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                               <tr>
+                                   <td scope="col">Bill</td>
+                                   <td scope="col">Instructor</td>
+                                   <td scope="col">07/01/17</td>
+                                   <td scope="col">8</td>
+                                   <td scope="col">1000</td>
+                                   <td scope="col">8000</td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col-12">
+               <div class="card border-primary mb-3 ">
+                   <div class="card-header">Add Employee</div>
+                   <div class="card-body text-primary">
+                       <form>
+                           <div class="form-group">
+                               <label for="formGroupExampleInput">Employee Name</label>
+                               <input type="text" class="form-control name" id="formGroupExampleInput" placeholder="Example input">
+                           </div>
+                           <div class="form-group">
+                               <label for="formGroupExampleInput2">Role</label>
+                               <input type="text" class="form-control role" id="formGroupExampleInput2" placeholder="Another input">
+                           </div>
+                           <div class="form-group">
+                               <label for="formGroupExampleInput2">Start Date (dd/mm/yy)</label>
+                               <input type="date" class="form-control start-date" id="formGroupExampleInput2" placeholder="Another input">
+                           </div>
+                           <div class="form-group">
+                               <label for="formGroupExampleInput2">Monthly Rate</label>
+                               <input type="number" class="form-control monthly-rate" id="formGroupExampleInput2" placeholder="Another input">
+                           </div>
+                           <button type="submit" class="btn btn-primary mb-2 submit">Submit</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+  
+   <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Script -->
+  <script src="project.js"></script>
+
+</body>
+
+
+</html>
