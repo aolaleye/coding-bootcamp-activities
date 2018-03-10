@@ -14,20 +14,12 @@ var config = {
 
 var database = firebase.database();
 
-var eName = "";
-var eRole = "";
-var eStartDate = "";
-var eRate = "";
-// var eMonthsWorked =
-// var eTotalBilled =
-
-
 $(".submit").on("click", function() {
     event.preventDefault();    
-    eName = $(".name").val().trim();
-    eRole = $(".role").val().trim();
-    eStartDate = $(".start-date").val().trim();
-    eRate = $(".monthly-rate").val().trim();
+    var eName = $(".name").val().trim();
+    var eRole = $(".role").val().trim();
+    var eStartDate = $(".start-date").val().trim();
+    var eRate = $(".monthly-rate").val().trim();
     
     console.log(eName);
     console.log(eRole);
