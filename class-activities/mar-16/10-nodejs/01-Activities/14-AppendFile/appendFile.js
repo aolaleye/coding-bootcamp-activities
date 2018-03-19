@@ -6,7 +6,7 @@ var textFile = process.argv[2];
 
 // We then append the contents "Hello Kitty" into the file
 // If the file didn't exist then it gets created on the fly.
-fs.appendFile(textFile, "Hello Kitty", function(err) {
+fs.appendFile(textFile, "Hello Kitty\n", function(err) {
 
   // If an error was experienced we say it.
   if (err) {
@@ -20,4 +20,5 @@ fs.appendFile(textFile, "Hello Kitty", function(err) {
 
 });
 
+//you'll run --> node appendFile.js test.txt
 

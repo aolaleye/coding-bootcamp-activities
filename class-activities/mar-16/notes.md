@@ -22,5 +22,13 @@ __What is a module?__
 
 __fs__
 * file system
+
+__writeFile__
 * allows us to rewrite files
 * if there is a file with the same name, it will destroy the old file and replace it with whatever is in the new file
+
+__appendFile__
+* will not destroy file contents, will only add to the file
+
+__readFile__
+* reads the file, prints contents

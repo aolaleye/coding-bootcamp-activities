@@ -10,11 +10,11 @@
 
 * The transactions possible are:
 
-  * `total` - this should tally up all of the money in the bank balance and display it for the user.
+  * `total` - this should tally up all of the money in the bank balance and display it for the user. //tells balance
 
-  * `deposit <number>` - this should add a positive amount to the bank balance. (No need to display the total here)
+  * `deposit <number>` - this should add a positive amount to the bank balance. (No need to display the total here) //adds to bank account
 
-  * `withdraw <number>` - this should add a negative amount to the bank balance. (No need to display the total here)
+  * `withdraw <number>` - this should add a negative amount to the bank balance. (No need to display the total here) //removes amount
 
   * `lotto` - this should subtract an amount from the bank balance, but if a random number is hit it should add back a larger amount into the bank balance.
 
