@@ -16,3 +16,6 @@ __What is Node.js?__
 * extendable - numerous plugins
 * fast implementation
 * single-threaded ansychronus model - it can handle multiple requests  - all requests are coming into one thread
+
+__What is a module?__
+* way to package bits of code
