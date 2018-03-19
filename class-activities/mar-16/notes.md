@@ -19,3 +19,8 @@ __What is Node.js?__
 
 __What is a module?__
 * way to package bits of code
+
+__fs__
+* file system
+* allows us to rewrite files
+* if there is a file with the same name, it will destroy the old file and replace it with whatever is in the new file
