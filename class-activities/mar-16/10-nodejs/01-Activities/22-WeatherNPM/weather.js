@@ -6,7 +6,7 @@ weather.find({ search: "Anchorage, AK", degreeType: "F" }, function(err, result)
 
   // If there is an error log it.
   if (err) {
-    console.log(err);
+    return console.log(err);
   }
 
   // If there is no error... then print out the weather data.

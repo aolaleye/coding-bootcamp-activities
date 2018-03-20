@@ -32,3 +32,6 @@ __appendFile__
 
 __readFile__
 * reads the file, prints contents
+
+__npm__
+* node package manager

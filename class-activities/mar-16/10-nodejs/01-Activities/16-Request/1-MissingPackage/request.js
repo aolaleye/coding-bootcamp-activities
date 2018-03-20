@@ -1,3 +1,6 @@
+//Grab request package...
+var request = require("request");
+
 // TODO Grab the request package...
 // @link https://www.npmjs.com/package/request
 
@@ -15,3 +18,7 @@ request("https://en.wikipedia.org/wiki/Kudos_(granola_bar)", function(error, res
     console.log(body);
   }
 });
+
+
+//must npm install it and require it
+//npm install request (name of package)
