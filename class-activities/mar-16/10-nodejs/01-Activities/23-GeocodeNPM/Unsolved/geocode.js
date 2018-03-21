@@ -16,19 +16,21 @@ var geocoder = require('geocoder');
 
 // Take in the command line arguments
 
-var address = process.argv[2];
-// var entry = process.argv;
+// var city = process.argv[2];
+// var state = process.argv[3];
+// var address = city + ", " + state;
+
+var entry = process.argv;
+var address = "";
 
 
 // Build your entry as an array or string
 
-// for (var i = 2; i <entry.length; i++) {
+for (var i = 2; i < entry.length; i++) {
 
-//     if (i > 2 && i <entry.length) {
-//       address = address + entry[i];
-//     }
+    address = address + " " + entry[i];
     
-// }
+}
 
 // Then use Geocoder NPM to geocode the address
 
