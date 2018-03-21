@@ -9,28 +9,41 @@
 
 // Include the geocoder NPM package (Remember to run "npm install geocoder"!)
 var geocoder = require("geocoder");
+var inquirer = require("inquirer");
+
+inquirer.prompt([
+    {
+      type: "input",
+      message: "Enter Address:",
+      name: "address"
+    }
+]).then(function(inquirerResponse) {
+
+    console.log(inquirerResponse.address);
+    //built-in node.js debugger - red dot sets a breakpoint that tells the program to pause
+
+
+    geocoder.geocode(inquirerResponse.address, function(err, data) {
+      console.log(JSON.stringify(data, null, 2));
+    });
+});
+  
 
 // Take in the command line arguments
-var nodeArgs = process.argv;
+// var nodeArgs = process.argv;
 
 // Create an empty string for holding the address
-var address = "";
+
 
 // Capture all the words in the address (again ignoring the first two Node arguments)
-for (var i = 2; i < nodeArgs.length; i++) {
+// for (var i = 2; i < nodeArgs.length; i++) {
 
-  // Build a string with the address.
-  address = address + "" + nodeArgs[i];
-  console.log(address);
+//   // Build a string with the address.
+//   address = address + "" + nodeArgs[i];
+//   console.log(address);
 
-}
+// }
 
 // Then use the Google Geocoder to geocode the address
-geocoder.geocode(address, function(err, data) {
 
-  // Then console log the result and stringify it.
-  // Note the argument of "2" being included in the JSON stringify. This makes the JSON output pretty.
-  // See link here: http://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript
-  console.log(JSON.stringify(data, null, 2));
-});
 
