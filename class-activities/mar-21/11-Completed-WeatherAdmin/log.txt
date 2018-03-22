@@ -1,0 +1,3 @@
+Name: Alex, Location: Charlotte, NC, Date: 1521745593517
+Name: Mary, Location: Paris, France, Date: 1521745671605
+Name: John, Location: New York City, Date: 1521745739843

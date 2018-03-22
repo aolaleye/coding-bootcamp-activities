@@ -7,5 +7,4 @@ var Student = function(name, subject, gpa) {
     };
   };
   
-  // Exporting our CastMember constructor. We will require it in movie.js
-  module.exports = Student;
+module.exports = Student;
