@@ -1,28 +1,18 @@
 var inquirer = require("inquirer");
 
-var coinflip = function() {
-    return Math.floor(Math.random() * 2);
-}
-
 function Player(name, position, offense, defense) {
   this.name = name;
   this.position = position;
   this.offense = offense;
   this.defense = defense;
   this.goodGame = function() {
-    coinflip();
-    if (coinflip === 1) {
-        this.offense + 1;
-    } else if (coinflip === 2) {
-        this.defense + 1;
+    if (Math.floor(Math.random() * 2) === 0) {
+        this.offense++;
     }
   };
   this.badGame = function() {
-    coinflip();
-    if (coinflip === 1) {
-        this.offense - 1;
-    } else if (coinflip === 2) {
-        this.defense - 1;
+    if (Math.floor(Math.random() * 2) === 0) {
+        this.offense--;
     }
   };
   this.printStats = function() {
@@ -38,7 +28,7 @@ var teamArray = [];
 var addPlayer = function() {
 
     if (count < 3) {
-        console.log("New Player");
+        console.log("New Player Added!");
 
         inquirer.prompt([
         {
@@ -62,17 +52,17 @@ var addPlayer = function() {
           answers.offense,
           answers.defense);
 
-        newPlayer.printInfo();
+        newPlayer.printStats();
 
         teamArray.push(newPlayer);
         
         count++;
    
-        askQuestion();
+        addPlayer();
       });
     }
     else {
-        for (i = 0; x < teamArray.length; i++) {
+        for (i = 0; i < teamArray.length; i++) {
             teamArray[i].printInfo();
         }
     }
@@ -80,18 +70,22 @@ var addPlayer = function() {
 
 addPlayer();
 
-var randomNumber = function getRandomNumber(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+// var randomNumber = function getRandomNumber(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
 
-function playGame() {
-    for(i = 0; i < 6; i++) {
-        var firstNumber = randomNumber(1,20);
-        var secondNumber = randomNumber(1,20);
+// function playGame() {
+//     for(i = 0; i < 6; i++) {
+//         var firstNumber = randomNumber(1,20);
+//         var secondNumber = randomNumber(1,20);
 
-        if (firstNumber < )
+//         if (firstNumber < ) {
 
-    }
-}
+//         } else if (secondNumber > ) {
+
+//         }
+
+//     }
+// }
