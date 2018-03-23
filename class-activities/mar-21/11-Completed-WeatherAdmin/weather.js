@@ -12,17 +12,18 @@ var admin = false;
 function userOrAdmin() {
     inquirer.prompt([
         {
-            type: "input",
+            type: "list",
             message: "User or Admin?",
+            choices: ["User", "Admin"],
             name: "userOrAdmin"
         }
     ]).then(function(response) {
-        if (response.userOrAdmin === "user") {
+        if (response.userOrAdmin === "User") {
             user = true;
             if (user === true) {
                 isUser();
             } 
-        } else if (response.userOrAdmin === "admin") {
+        } else if (response.userOrAdmin === "Admin") {
             inquirer.prompt([
                 {
                     type: "password",
@@ -77,7 +78,21 @@ function isUser() {
 
 //if admin === true
 function isAdmin() {
-    showCommandLog();
+    inquirer.prompt([
+    {
+        type: "list",
+        message: "What information are you requesting?",
+        choices: ["Number of Users", "Complete User Information"],
+        name: "requestedInfo"
+    }
+    ]).then(function(response) {
+        if (response.requestedInfo === "Number of Users") {
+            console.log(userList.listOfUsers.length);
+        }
+        else if (response.requestedInfo === "Complete User Information") {
+            showCommandLog();
+        }
+  });
 }
 
 // <--- appends commands to log.txt --->
