@@ -56,7 +56,7 @@ function isUser() {
       },
       {
         type: "input",
-        message: "Location",
+        message: "Location:",
         name: "location"
       }
     ]).then(function(response) {
