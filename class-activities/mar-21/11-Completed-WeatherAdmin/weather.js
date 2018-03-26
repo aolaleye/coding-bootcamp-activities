@@ -89,7 +89,15 @@ function isAdmin() {
     }
     ]).then(function(response) {
         if (response.requestedInfo === "Number of Users") {
-            console.log(wc -l < log.txt);
+            //somehow print the number of lines in log.txt
+            //wc -l < log.txt;
+            fs.readFile("log.txt", "utf-8", function(error, data) {
+                if (error) {
+                    return console.log(error);
+                }
+                var commandArray = data.split("\n"); 
+                console.log(commandArray.length);
+            });
         }
         else if (response.requestedInfo === "Complete User Information") {
             showCommandLog();
