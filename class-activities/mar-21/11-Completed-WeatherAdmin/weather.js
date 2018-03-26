@@ -5,6 +5,7 @@ var userList = new List();
 var fs = require("fs");
 var inquirer = require("inquirer");
 var weather = require('weather-js');
+var moment = require("moment");
 
 var user = false;
 var admin = false;
@@ -98,7 +99,7 @@ function isAdmin() {
 // <--- appends commands to log.txt --->
 function logCommand() {
     
-    var newCommand = "\n" + "Name: " + userList.listOfUsers[0].name + ", Location: " + userList.listOfUsers[0].location + ", Date: " + userList.listOfUsers[0].date;
+    var newCommand = "\n" + "Name: " + userList.listOfUsers[0].name + ", Location: " + userList.listOfUsers[0].location + ", Date: " + moment(userList.listOfUsers[0].date).format("MM-DD-YYYY");
 
     //appends command to log.txt
     fs.appendFile("log.txt", newCommand, function(err) {
