@@ -12,8 +12,14 @@ var connection = mysql.createConnection({
   database: "playlistDB"
 });
 
-connection.connect(function(err) {
-  if (err) throw err;
+connection.connect(function(error) {
+  if (error) throw error;
   console.log("connected as id " + connection.threadId);
-  connection.end();
+
+  connection.query("SELECT * FROM playlistDB.playlist", function(error, response) {
+    if(error) throw error;
+    console.log(response);
+    connection.end();
+  });
+
 });
