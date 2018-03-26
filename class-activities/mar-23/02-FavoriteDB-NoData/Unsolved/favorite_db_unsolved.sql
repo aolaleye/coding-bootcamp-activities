@@ -35,3 +35,15 @@ CREATE TABLE favorite_movies (
   -- Set the primary key of the table to id --
   PRIMARY KEY (id)
 );
+
+SELECT * FROM favorite_foods;
+INSERT INTO favorite_foods(food, score)
+VALUES("Pizza", 20);
+
+SELECT * FROM favorite_songs;
+INSERT INTO favorite_songs(song, artist, score)
+VALUES("Hello", "Adele", 45);
+
+SELECT * FROM favorite_movies;
+INSERT INTO favorite_movies(movie, five_times, score)
+VALUES("Cinderella", true, 15);
