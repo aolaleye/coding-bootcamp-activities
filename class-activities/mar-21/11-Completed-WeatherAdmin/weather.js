@@ -62,6 +62,7 @@ function isUser() {
       }
     ]).then(function(response) {
         userList.addUser(response.name, response.location, Date.now());
+        console.log(userList.listOfUsers);
 
         logCommand();
 
@@ -88,7 +89,7 @@ function isAdmin() {
     }
     ]).then(function(response) {
         if (response.requestedInfo === "Number of Users") {
-            console.log(userList.listOfUsers.length);
+            console.log(wc -l < log.txt);
         }
         else if (response.requestedInfo === "Complete User Information") {
             showCommandLog();
@@ -134,4 +135,3 @@ function showCommandLog() {
 
 //run program
 userOrAdmin();
-

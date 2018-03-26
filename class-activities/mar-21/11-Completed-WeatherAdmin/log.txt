@@ -1,6 +1,7 @@
-Name: Alex, Location: Charlotte, NC, Date: 1521745593517
-Name: Mary, Location: Paris, France, Date: 1521745671605
-Name: John, Location: New York City, Date: 1521745739843
-Name: Sally, Location: Salt Lake City, Utah, Date: 1521746655024
-Name: Rachel, Location: Atlanta, GA, Date: 1521747730774
+Name: Alex, Location: Charlotte, NC, Date: 03-22-2018
+Name: Mary, Location: Paris, France, Date: 03-22-2018
+Name: John, Location: New York City, Date: 03-22-2018
+Name: Sally, Location: Salt Lake City, Utah, Date: 03-22-2018
+Name: Rachel, Location: Atlanta, GA, Date: 03-22-2018
 Name: Jenny, Location: Boston, MA, Date: 03-25-2018
+Name: Melissa, Location: Concord, NC, Date: 03-25-2018
