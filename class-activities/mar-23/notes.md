@@ -11,9 +11,14 @@ __what does it do?__
 * redundancy allow you to switch between databases
 
 __types of databases__
-* mySQL - very popular because it's free
+* mySQL - very popular because it's free, reliable
 * Oracle
-* mongoDB (doesn't use SQL)
+* mongoDB (doesn't use SQL, data is not structured)
+
+__SQL databases__
+* data is stored in rows and columns
+* structured
+* think excel spreadsheet
 
 
 
