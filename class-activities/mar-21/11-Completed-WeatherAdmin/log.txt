@@ -5,3 +5,9 @@ Name: Sally, Location: Salt Lake City, Utah, Date: 03-22-2018
 Name: Rachel, Location: Atlanta, GA, Date: 03-22-2018
 Name: Jenny, Location: Boston, MA, Date: 03-25-2018
 Name: Melissa, Location: Concord, NC, Date: 03-25-2018
+Name: Richard, Location: Austin, TX, Date: 03-25-2018
+Name: Mike, Location: Little Rock, AR, Date: 03-25-2018
+Name: Ryan, Location: Newark, NJ, Date: 03-25-2018
+Name: Kyle, Location: Seattle, WA, Date: 03-25-2018
+Name: Lauren, Location: Las Vegas, NV, Date: 03-25-2018
+Name: Katie, Location: Albuquerque, NM, Date: 03-25-2018

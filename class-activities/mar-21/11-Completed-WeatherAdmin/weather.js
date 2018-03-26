@@ -62,7 +62,6 @@ function isUser() {
       }
     ]).then(function(response) {
         userList.addUser(response.name, response.location, Date.now());
-        console.log(userList.listOfUsers);
 
         logCommand();
 
@@ -72,7 +71,11 @@ function isUser() {
               return console.log(err);
             }
 
-            console.log(JSON.stringify(result, null, 2));
+            console.log("--------------------------------------");
+            console.log("City: " + result[0].location.name);
+            console.log("Current Temperature (Fahrenheit): " + result[0].current.temperature);
+            console.log("Forecast: " + result[0].current.skytext);
+            console.log("--------------------------------------");
           
           });
     });
@@ -89,14 +92,14 @@ function isAdmin() {
     }
     ]).then(function(response) {
         if (response.requestedInfo === "Number of Users") {
-            //somehow print the number of lines in log.txt
+            //figure out how to print the number of lines in log.txt
             //wc -l < log.txt;
             fs.readFile("log.txt", "utf-8", function(error, data) {
                 if (error) {
                     return console.log(error);
                 }
                 var commandArray = data.split("\n"); 
-                console.log(commandArray.length);
+                console.log(commandArray.length + " users have retrieved weather information.");
             });
         }
         else if (response.requestedInfo === "Complete User Information") {
