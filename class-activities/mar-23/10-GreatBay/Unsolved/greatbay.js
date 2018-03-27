@@ -97,6 +97,7 @@ function bidAuction() {
         ]).then(function(response) {
             for (i = 0; i < res.length; i++) {
                 if (response.chosenItem === res[i].itemName) {
+                    var chosenItem = res[i];
                     inquirer.prompt([
                         {
                         type: "input",
@@ -104,14 +105,14 @@ function bidAuction() {
                         name: "bid",
                         }
                     ]).then(function(response) {
-                        if (parseInt(response.bid) > res[i].highestBid) {
-                        connection.query("UPDATE playlist SET ? WHERE ?",
+                        if (parseInt(response.bid) > chosenItem.highestBid) {
+                        connection.query("UPDATE auctions SET ? WHERE ?",
                             [
                                 {
-                                highestBid: response.bid
+                                highestBid: parseInt(response.bid)
                                 },
                                 {
-                                itemName: res[i].itemName
+                                id: chosenItem.id
                                 }
                             ],
                             function(err, res) {
