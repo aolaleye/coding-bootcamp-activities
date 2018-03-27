@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "ice_creamDB"
+  database: "icecream_db"
 });
 
 connection.connect(function(err) {

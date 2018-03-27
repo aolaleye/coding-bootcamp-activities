@@ -9,14 +9,14 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "playlistDB"
+  database: "playlist_db"
 });
 
 connection.connect(function(error) {
   if (error) throw error;
   console.log("connected as id " + connection.threadId);
 
-  connection.query("SELECT * FROM playlistDB.playlist", function(error, response) {
+  connection.query("SELECT * FROM playlist_db.playlist", function(error, response) {
     if(error) throw error;
     console.log(response);
     connection.end();

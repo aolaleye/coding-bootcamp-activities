@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "playlistDB"
+  database: "playlist_db"
 });
 
 connection.connect(function(error) {
@@ -18,13 +18,13 @@ connection.connect(function(error) {
   console.log("connected as id " + connection.threadId);
 
   if(command === "all") {
-    connection.query("SELECT * FROM playlistDB.playlist", function(error, response) {
+    connection.query("SELECT * FROM playlist_db.playlist", function(error, response) {
       if(error) throw error;
       console.log(response);
       connection.end();
     });
   } else {
-    connection.query("SELECT * FROM playlistDB.playlist", function(error, response) {
+    connection.query("SELECT * FROM playlist_db.playlist", function(error, response) {
       if(error) throw error;
       for (var i = 0; i < response.length; i++) {
         if (response[i].artist === command) {

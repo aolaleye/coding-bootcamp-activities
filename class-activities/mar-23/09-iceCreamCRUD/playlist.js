@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: "",
-  database: "playlistDB"
+  database: "playlist_db"
 });
 
 connection.connect(function(err) {
@@ -71,12 +71,12 @@ function deletePlaylist() {
     function(err, res) {
       console.log(res.affectedRows + " playlists deleted!\n");
       // Call readPlaylists AFTER the DELETE completes
-      readPlaylists();
+      readPlaylist();
     }
   );
 }
 
-function readPlaylists() {
+function readPlaylist() {
   console.log("Selecting all playlists...\n");
   connection.query("SELECT * FROM playlist", function(err, res) {
     if (err) throw err;
