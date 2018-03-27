@@ -52,13 +52,13 @@ function postAuction() {
             type: "input",
             message: "What is your starting bid?",
             name: "startingBid",
-            // validate:function(value) {
-            //     if (isNAN(value) === false) {
-            //         return true;
-            //     } else {
-            //         return false;
-            //     }
-            // } 
+            validate:function(value) {
+                if (isNaN(value) === false) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } 
         }
     ]).then(function(response) {
         connection.query(
@@ -71,7 +71,20 @@ function postAuction() {
             },
             function(err, res) {
               console.log("Your item was added successfully");
-              start();
+              inquirer.prompt([
+                {
+                    type: "list",
+                    message: "Would you like to post or bid another item?",
+                    choices: ["Yes", "No"],
+                    name: "startAgain"
+                }
+                ]).then(function(response) {
+                    if (response.startAgain === "Yes") {
+                        start();
+                    } else if (response.startAgain === "No") {
+                        connection.end();
+                    }
+                });
             }
           );
     });
@@ -103,6 +116,13 @@ function bidAuction() {
                         type: "input",
                         message: "What is your bid?",
                         name: "bid",
+                        validate:function(value) {
+                            if (isNaN(value) === false) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
                         }
                     ]).then(function(response) {
                         if (parseInt(response.bid) > chosenItem.highestBid) {
@@ -117,11 +137,37 @@ function bidAuction() {
                             ],
                             function(err, res) {
                                 console.log("You are now the highest bidder!");
-                                start();
+                                inquirer.prompt([
+                                    {
+                                        type: "list",
+                                        message: "Would you like to post or bid another item?",
+                                        choices: ["Yes", "No"],
+                                        name: "startAgain"
+                                    }
+                                    ]).then(function(response) {
+                                        if (response.startAgain === "Yes") {
+                                            start();
+                                        } else if (response.startAgain === "No") {
+                                            connection.end();
+                                        }
+                                    });
                             });
                         } else {
                             console.log("Sorry your bid is too low, try again");
-                            start();
+                            inquirer.prompt([
+                                {
+                                    type: "list",
+                                    message: "Would you like to post or bid another item?",
+                                    choices: ["Yes", "No"],
+                                    name: "startAgain"
+                                }
+                                ]).then(function(response) {
+                                    if (response.startAgain === "Yes") {
+                                        start();
+                                    } else if (response.startAgain === "No") {
+                                        connection.end();
+                                    }
+                                });
                         }
                     });
                 }
