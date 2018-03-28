@@ -45,7 +45,7 @@ function song() {
 }
 
 function popular() {
-    connection.query("SELECT artist FROM top5000 GROUP BY artist HAVING count(*) > 1", [value], function(err, res) {
+    connection.query("SELECT artist FROM top5000 GROUP BY artist HAVING count(*) > 1", function(err, res) {
         if (err) throw err;
         for (var i = 0; i < res.length; i++) {
             console.log("Artist: " + res[i].artist);
