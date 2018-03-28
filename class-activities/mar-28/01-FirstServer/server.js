@@ -21,3 +21,20 @@ server.listen(PORT, function() {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
+
+//-------------------
+
+var http = require("http");
+var PORT = 8080; //(a constant)
+
+var server = http.createServer(function(request, response) {
+  // this will run when we have a request
+  response.end("It worked! Path hit: " + request.url);
+}); //(takes one argument, a callback that will fire everytime it gets a request)
+
+server.listen(PORT, function() {
+  console.log("Server listening on http://localhost:" + PORT);
+});
+
+
+
