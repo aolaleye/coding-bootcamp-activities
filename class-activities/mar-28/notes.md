@@ -41,3 +41,13 @@ __building a server__
     * SEND - send back data - maybe HTML or JSON
     * recieve POSTS - special kinds of requests that carry data with them
     * server side logic
+
+__what is Express?__
+* web framework for node to make creating code for server much simpler
+            
+__route__
+* a way to get to something on the server
+* urls
+* /saved is a route to the saved page
+
+
