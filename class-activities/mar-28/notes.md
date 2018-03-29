@@ -50,4 +50,11 @@ __route__
 * urls
 * /saved is a route to the saved page
 
+__heroku__
+* paas - platform as a service
+* allows deployment of a backend and serve your files
+* handles your full stack app
+* gives special url for your app
+
+
 
