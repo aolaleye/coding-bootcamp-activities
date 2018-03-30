@@ -37,19 +37,25 @@
 
   <script type="text/javascript">
 
-    $.get("/api", function(data) {
-      for (var i = 0; i < data.length; i++) {
-        var wellSection = $("<div>");
-        wellSection.addClass("well");
-        wellSection.attr("id", "character-well-" + i);
-        $("#well-section").append(wellSection);
-
-        $("#character-well-" + i).append("<h2>" + data[i].name + "</h2>");
-        $("#character-well-" + i).append("<h3>Role: " + data[i].role + "</h4>");
-        $("#character-well-" + i).append("<h3>Age: " + data[i].age + "</h4>");
-        $("#character-well-" + i).append("<h3>Force Points: " + data[i].forcePoints + "</h4>");
-      }
+    $.get("/api/tables", function (data) {
+        for (var i = 0; i< data.length && i < 5; i++) {
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "table-well-" + i);
+            $("#tableSection").append(wellSection);
+            $("#table-well-" + i).append("<h3>" + data[i].uniqueID + "</h3>");
+            $("#table-well-" + i).append("<h3>Name: " + data[i].name + "</h4>");
+        }
+        for (var i = 5; i < data.length; i++) {
+            var wellSection = $("<div>");
+            wellSection.addClass("well");
+            wellSection.attr("id", "table-well-" + i);
+            $("#waitlistSection").append(wellSection);
+            $("#table-well-" + i).append("<h3>" + data[i].uniqueID + "</h3>");
+            $("#table-well-" + i).append("<h3>Name: " + data[i].name + "</h4>");
+        }
     });
+
   </script>
   
 </body>
