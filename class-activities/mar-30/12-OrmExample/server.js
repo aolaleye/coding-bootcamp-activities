@@ -4,6 +4,7 @@ var orm = require("./config/orm.js");
 orm.selectAndOrder("animal_name", "pets", "price");
 
 // Find a pet in the pets table by an animal_name of Rachel.
+//select where animal_name is Rachel
 orm.selectWhere("pets", "animal_name", "Rachel");
 
 // Find the buyer with the most pets.

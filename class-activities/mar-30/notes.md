@@ -19,3 +19,9 @@ PUT /api/animals/27 (update a single animal)
 DELETE /api/animals/27 (delete a single animal)
 _this is REST_
 _RESTful Application_
+
+__What is ORM?__
+* Object-Relational Mapping
+
+__Abstraction__
+* take an idea and make it more simple by wrapping code around it
