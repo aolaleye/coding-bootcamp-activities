@@ -1,0 +1,20 @@
+<style media="screen">
+  li {
+    height : 100px;
+    width: 100px;
+    color: black;
+    margin-bottom: 30px;
+  }
+</style>
+
+<h1>List of All Ice Creams:</h1>
+
+{{#each iceCreams }}
+<div>
+  <h3>{{name}}</h3>
+  <p>Price: {{price}}</p>
+  <p>Awesomeness: {{awesomeness}}</p>
+  <hr>
+</div>  
+{{/each}}
+
