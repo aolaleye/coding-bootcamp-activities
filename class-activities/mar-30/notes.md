@@ -25,3 +25,11 @@ __What is ORM?__
 
 __Abstraction__
 * take an idea and make it more simple by wrapping code around it
+
+__What is MVC?__
+* Model View Controller
+* When we are building software, how we structure our code and organize our files is important - called software architecture
+
+* __Model__ - represents the stuff in your database, the core model of your application
+* __Views__ - templates - handlebar templates, html pages, what the user sees/interacts with
+* __Controller__ - the glue that binds the model and view together, it handles all of the viewers actions and interactions - where the routes are going to be, what decides when to write to database and what to read from the database

@@ -44,5 +44,16 @@ router.put("/api/cats/:id", function(req, res) {
   });
 });
 
+router.delete("/api/cats/:id", function(req, res) {
+  cat.delete([
+    "name", "Bobbi"
+  ], [
+    req.body.name
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
+
 // Export routes for server.js to use.
 module.exports = router;

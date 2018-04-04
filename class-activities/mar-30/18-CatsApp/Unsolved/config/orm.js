@@ -87,6 +87,24 @@ var orm = {
 
       cb(result);
     });
+  },
+  //delete
+  delete: function(table, condition, conditionValue, cb) {
+    var queryString = "DELETE FROM " + table;
+
+    queryString += " WHERE ";
+    queryString += condition;
+    queryString += " = ";
+    queryString += conditionValue;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   }
 };
 
