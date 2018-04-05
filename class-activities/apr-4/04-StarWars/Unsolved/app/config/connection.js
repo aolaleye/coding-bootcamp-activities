@@ -3,7 +3,7 @@
 // *********************************************************************************
 
 // Requiring mysql package
-var mysql = require("mysql");
+var mysql = require("sequelize");
 
 // Setting up our connection information
 var source = {
@@ -11,7 +11,7 @@ var source = {
     port: 3306,
     host: "localhost",
     user: "root",
-    password: "password",
+    password: "",
     database: "starwars"
   }
 };

@@ -8,10 +8,10 @@ var mysql = require("mysql");
 // Set up our connection information
 var connection = mysql.createConnection({
   port: 3306,
-  host: "",
-  user: "",
+  host: "local",
+  user: "root",
   password: "",
-  database: ""
+  database: "chirps_db"
 });
 
 // Connect to the database
