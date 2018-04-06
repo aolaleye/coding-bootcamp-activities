@@ -7,6 +7,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 
+var db = require ("./models");
+
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -28,6 +30,9 @@ require("./routes/api-routes.js")(app);
 
 // Starting our Express app
 // =============================================================
-app.listen(PORT, function() {
+db.sequelize.sync().app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
+// inside .sync() {force: true} --> would force a sync to the database
+// var shouldForce = (process.env.NODE_ENV === "development") ---> {force: shouldForce}
