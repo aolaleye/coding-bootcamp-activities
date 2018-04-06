@@ -30,7 +30,7 @@ module.exports = function(app) {
   // Get route for retrieving a single post
   app.get("/api/posts/:id", function(req, res) {
     
-    db.Post.findAll({
+    db.Post.findOne({
       where: {
         id: req.params.id
       }
@@ -69,7 +69,7 @@ module.exports = function(app) {
   // PUT route for updating posts
   app.put("/api/posts", function(req, res) {
     
-    db.Post.update({
+    db.Post.update(req.body, {
       where: {
         id: req.body.id
       }

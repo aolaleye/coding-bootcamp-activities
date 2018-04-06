@@ -58,3 +58,10 @@ __To go to sql database from command line and make sql commands:__
 mysql -u root -p 
 
 _mysql >_ CREATE DATABASE <database name>
+
+
+
+__Joins:__
+- want to be able to have multiple posts that point to the same author
+- so you add an author id to posts table
+- this is called a "Belongs-to Association"
