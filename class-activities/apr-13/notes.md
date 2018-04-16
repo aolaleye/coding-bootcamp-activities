@@ -39,4 +39,4 @@ __commands__
 
 `db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})` - creates a collection called places and gives it json document
 
-you can type .help() or .find() (i.e. db.places.help(), db.places.find())
+- you can type .help() or .find() (i.e. db.places.help(), db.places.find())
