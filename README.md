@@ -1,3 +1,3 @@
-# coding-bootcamp-activities
+# Coding Bootcamp Activities
 
-Contains in-class activites and related material from The Coding Bootcamp at UNC Charlotte
+_In-class activites and related material from The Coding Bootcamp at UNC Charlotte_
