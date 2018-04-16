@@ -40,3 +40,11 @@ __commands__
 `db.places.insert({"continent": "Africa", "country":"Morocco", "majorcities": ["Casablanca", "Fez", "Marrakech"]})` - creates a collection called places and gives it json document
 
 - you can type .help() or .find() (i.e. db.places.help(), db.places.find())
+
+__web scraping__
+* pulling data out of another website
+* we usually do this from an API, but when there is no API, scraping is a way to get it
+* if terms of service from site, prohibit you from taking data from the site, then scraping would be a felony
+
+__cheerio__
+* extracts data from the DOM, _does not_ manipulate the DOM

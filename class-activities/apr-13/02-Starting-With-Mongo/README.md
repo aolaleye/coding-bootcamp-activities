@@ -18,3 +18,17 @@ B. Use find commands to get:
 ### BONUS
 
 If you finish early, check out the MongoDB documentation and figure out how to find users by an entry in an array.
+
+use classroomdb
+
+db.people.insert({"name": "Alex", "rownumber":"2", "os":"Win", "hobbies": ["volleyball", "coding"]})
+db.people.insert({"name": "Abby", "rownumber":"2", "os":"Mac", "hobbies": ["movies", "writing"]})
+db.people.insert({"name": "Ellen", "rownumber":"2", "os":"Mac", "hobbies": ["workshops", "networking"]})
+db.people.insert({"name": "Melissa", "rownumber":"2", "os":"Win", "hobbies": ["working", "reading"]})
+
+db.people.find().pretty()
+db.people.find({"name": "Alex"})
+db.people.find({"os": "Mac"})
+
+db.people.find({"row": "2", "os": "Mac"})
+db.people.find({hobbies: {$in: ["coding"]}})

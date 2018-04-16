@@ -26,3 +26,10 @@ Example:
   "whatIWouldReallyCallIt": "Desiigner"
 }
 ```
+
+use zoo
+db.animals.insert({name: "Giraffe", numLegs:4, class:"mammal", weight:450, whatIWouldReallyCallIt: "tall friend"})
+db.animals.insert({name: "Panda", numLegs:4, class:"mammal", weight:260, whatIWouldReallyCallIt: "polka dotted friend"})
+db.animals.insert({name: "Dog", numLegs:4, class:"mammal", weight:160, whatIWouldReallyCallIt: "best friend"})
+db.animals.insert({name: "Cheetah", numLegs:4, class:"mammal", weight:290, whatIWouldReallyCallIt: "fast friend"})
+db.animals.insert({name: "Lion", numLegs:4, class:"mammal", weight:410, whatIWouldReallyCallIt: "strong friend"})
