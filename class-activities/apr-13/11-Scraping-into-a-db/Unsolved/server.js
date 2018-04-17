@@ -39,6 +39,19 @@ app.get("/", function(req, res) {
 // from the scrapedData collection as a json (this will be populated
 // by the data you scrape using the next route)
 
+app.get("/all", function(req, res) {
+  
+  db.scraperData.find({}, function(err, data) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      res.json(data);
+    }
+  });
+
+});
+
 // Route 2
 // =======
 // When you visit this route, the server will
@@ -49,6 +62,41 @@ app.get("/", function(req, res) {
 // push it into a MongoDB collection instead?
 
 /* -/-/-/-/-/-/-/-/-/-/-/-/- */
+
+app.get("/scrape", function(req, res) {
+
+  request("https://www.reddit.com/r/webdev", function(error, response, html) {
+
+    var $ = cheerio.load(html);
+
+    $("p.title").each(function(i, element) {
+
+      var title = $(element).text();
+
+      var link = $(element).children().attr("href");
+
+      if (title && link) {
+
+        db.scrapedData.insert({
+          title: title,
+          link: link
+        }, function(err, inserted) {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(inserted);
+          }
+        });
+
+      }
+
+      res.send("Scrape completed");
+
+    });
+
+  });
+
+});
 
 // Listen on port 3000
 app.listen(3000, function() {

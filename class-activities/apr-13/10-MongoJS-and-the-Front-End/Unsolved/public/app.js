@@ -16,6 +16,30 @@
   *Bonus*: Add additional ways to sort (e.g. by class or number of legs)
 */
 
+$("#weight-sort").click(function() {
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "/weight",
+    data: {
+      title: $("#title").val(),
+      note: $("#note").val(),
+      created: Date.now()
+    }
+  }).then(function(data) {
+
+      $("#results").prepend("<p class='data-entry' data-id=" + data._id + "><span class='dataTitle' data-id=" +
+      data._id + ">" + data.title + "</span><span class='delete'>X</span></p>");
+
+      $("#note").val("");
+      $("#title").val("");
+    });
+});
+
+$("#name-sort").click(function(){
+
+});
+
 // We'll be rewriting the table's data frequently, so let's make our code more DRY
 // by writing a function that takes in data (JSON) and creates a table body
 function displayResults(data) {

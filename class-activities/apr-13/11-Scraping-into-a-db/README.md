@@ -10,3 +10,6 @@ before running this exercise.
 ### Hints
 
 * Consult the assignment files from earlier in the class if you need a refresher on Cheerio.
+
+use scraper
+scrapedData
