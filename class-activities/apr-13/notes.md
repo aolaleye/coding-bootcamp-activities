@@ -48,3 +48,8 @@ __web scraping__
 
 __cheerio__
 * extracts data from the DOM, _does not_ manipulate the DOM
+
+__mongoose__
+* can add behaviors
+* you can 'populate' data to simulate a join
+* use mongoose when you like working with bson data but you want more structure, more rules
