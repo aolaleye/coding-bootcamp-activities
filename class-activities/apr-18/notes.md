@@ -36,5 +36,5 @@ _instead of:_
 _do_
 * `${classmate} ate ${tacoCount} tacos.`
 * __can also span on two lines:__
-* `That's a lot of tacos, ${classmate}.
-Taco 'Bout Hungry!`
+* alert(`That's a lot of tacos, ${classmate}.
+Taco 'Bout Hungry!`);
