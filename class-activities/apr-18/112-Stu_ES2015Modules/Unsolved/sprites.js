@@ -1,5 +1,5 @@
 // Each 2 dimensional array represents a 2D sprite (similar to how characters are drawn in retro videogames)
-const happyFace = [
+export const happyFace = [
   [" ", " ", " ", "x", "x", "x", "x", " ", " ", " "],
   [" ", " ", "x", " ", " ", " ", " ", "x", " ", " "],
   [" ", "x", " ", " ", " ", " ", " ", " ", "x", " "],
@@ -12,7 +12,7 @@ const happyFace = [
   [" ", " ", " ", "x", "x", "x", "x", " ", " ", " "]
 ];
 
-const stickFigure = [
+export const stickFigure = [
   [" ", " ", " ", " ", "x", " ", " ", " ", " ", " "],
   [" ", "x", " ", "x", " ", "x", " ", "x", " ", " "],
   [" ", " ", "x", " ", "x", " ", "x", " ", " ", " "],
@@ -25,7 +25,7 @@ const stickFigure = [
   [" ", "x", " ", " ", " ", " ", " ", "x", " ", " "]
 ];
 
-const star = [
+export const star = [
   [" ", " ", " ", " ", "x", " ", " ", " ", " ", " "],
   [" ", " ", " ", "x", " ", "x", " ", " ", " ", " "],
   ["x", "x", "x", "x", "x", "x", "x", "x", "x", " "],

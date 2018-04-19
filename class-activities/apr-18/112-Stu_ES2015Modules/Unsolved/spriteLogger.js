@@ -12,3 +12,4 @@ const spriteLogger = (spriteArr) => {
 };
 
 // Add code to export the spriteLogger function as a default export
+export default spriteLogger;
