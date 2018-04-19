@@ -90,4 +90,4 @@ const lSum = lNames.reduce(function(sum, princess) {
 }, 0);
 
 const lAverage = lSum / lNames.length;
-console.log("l-average:", lAverage);
+console.log("l-average: ", lAverage);

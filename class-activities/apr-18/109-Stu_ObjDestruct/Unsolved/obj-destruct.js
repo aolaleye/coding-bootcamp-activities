@@ -26,18 +26,32 @@ let avatars = [
 ];
 
 // 1. Update this function so it uses array spread to append the new avatar to the array
-const addAvatar = function(avatar) {
-  return avatars.concat(avatar);
+// const addAvatar = function(avatar) {
+//   return avatars.concat(avatar);
+// };
+
+// const addAvatar = function(avatar) {
+//   return [...avatars, avatar];
+// };
+
+const addAvatar = avatar => [...avatars, avatar];
+
+// const greet = function(avatar) {
+//   // 2. Update this function to use object destructuring to access the avatar object properties
+//   const race = avatar.race;
+//   const name = avatar.name;
+//   const level = avatar.level;
+//   const gender = avatar.gender;
+//   const className = avatar.className;
+//   console.log(`I am ${name}, level ${level} ${gender} ${race} ${className}.`);
+// };
+
+const greet = (avatar) => {
+  const {race, name, level, geneder, className} = avatar;
+  console.log(`I am ${name}, level ${level} ${gender} ${race} ${className}.`);
 };
 
-const greet = function(avatar) {
-  // 2. Update this function to use object destructuring to access the avatar object properties
-  const race = avatar.race;
-  const name = avatar.name;
-  const level = avatar.level;
-  const gender = avatar.gender;
-  const className = avatar.className;
-  console.log(`I am ${name}, level ${level} ${gender} ${race} ${className}.`);
+const greet2 = ({race, name, level, geneder, className}) => { console.log(`I am ${name}, level ${level} ${gender} ${race} ${className}.`);
 };
 
 // Adds borrub to the list of avatars
