@@ -23,8 +23,10 @@ In this activity, we will dissect a simple React application.
 * Open the `src/App.js` file, what's going on in this file? Try to answer the following questions:
 
   * What does the `App` function return?
+  --> The HelloReact function - "Hello World"
 
   * Why do we import the React library? We aren't using the React keyword anywhere. Is it possible to remove this and still have our code work?
+  --> so it can read JSX
 
 ### index.js
 
