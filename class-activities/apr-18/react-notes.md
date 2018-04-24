@@ -74,3 +74,10 @@ __3 phases a function goes through__
 2. person hands us information
 3. returns data
 
+__Ternary Expression__
+    if (isCool) {result = "Yes he's cool."} else {result = "Nice try, not cool."}
+    
+    _is the same as_
+
+    result = isCool ? "Yes he's cool." : "Nice try, not cool.";
+
