@@ -1,15 +1,37 @@
 import React from "react";
-import Header from "./components/Header";
-import Section from "./components/Section";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+import friends from "./friends.json";
+import "./App.css";
 
-import Navbar from "./components/Navbar";
+class App extends React.Component {
+  state = {
+    friends
+  };
 
-const App = () => (
-  <div>
-    <Navbar />
-    <Header />
-    <Section />
-  </div>
-);
+  removeFriend = id => {
+    const friends = this.state.friends.filter(friend => friend.id !== id);
+    this.setState({friends})
+  };
+
+  render() {
+    return (
+      <Wrapper>
+        <h1 className="title">Friends List</h1>
+
+        {this.state.friends.map(card => 
+          <FriendCard 
+            key={card.id} 
+            removeFriend={this.removeFriend} 
+            name={card.name} 
+            image={card.image} 
+            occupation={card.occupation} 
+            location={card.location}
+          />)}
+
+      </Wrapper>
+    );
+  }
+};
 
 export default App;

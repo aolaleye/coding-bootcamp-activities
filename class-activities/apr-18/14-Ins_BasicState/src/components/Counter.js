@@ -13,7 +13,7 @@ class Counter extends React.Component {
     this.setState({ count: this.state.count + 1 });
   };
 
-  // The render method returns the JSX that should be rendered
+  // The render method returns the JSX that should be rendered - need it when it is a class based componenet
   render() {
     return (
       <div className="card text-center">
