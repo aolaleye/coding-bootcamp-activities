@@ -26,6 +26,33 @@ class Books extends Component {
       .catch(err => console.log(err));
   };
 
+  removeBook = id => {
+    API.deleteBook(id)
+      .then(res => this.loadBooks())
+      .catch(err => console.log(err));
+  };
+
+  handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.author) {
+      API.saveBook({
+        title: this.state.title,
+        author: this.state.author,
+        synopsis: this.state.synopsis
+      })
+      .then (res => this.loadBooks())
+    .catch( err => console.log(err))
+    }
+  };
+
   render() {
     return (
       <Container fluid>
@@ -35,10 +62,13 @@ class Books extends Component {
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
             <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Book</FormBtn>
+              <Input name="title" value={this.state.title} onChange={this.handleInputChange} placeholder="Title (required)" />
+              <Input name="author" value={this.state.author} onChange={this.handleInputChange} placeholder="Author (required)" />
+              <TextArea name="synopsis" value={this.state.synopsis} onChange={this.handleInputChange} placeholder="Synopsis (Optional)" />
+              <FormBtn disabled={!(this.state.author && this.state.title)}
+                search={this.state.search}
+                onClick={this.handleFormSubmit}
+              >Submit Book</FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
@@ -55,7 +85,7 @@ class Books extends Component {
                           {book.title} by {book.author}
                         </strong>
                       </a>
-                      <DeleteBtn />
+                      <DeleteBtn onClick={() => this.removeBook(book._id)}/>
                     </ListItem>
                   );
                 })}
