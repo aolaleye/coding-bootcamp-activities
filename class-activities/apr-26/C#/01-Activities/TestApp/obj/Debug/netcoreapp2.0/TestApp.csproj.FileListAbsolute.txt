@@ -1,0 +1,11 @@
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/bin/Debug/netcoreapp2.0/TestApp.deps.json
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/bin/Debug/netcoreapp2.0/TestApp.runtimeconfig.json
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/bin/Debug/netcoreapp2.0/TestApp.runtimeconfig.dev.json
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/bin/Debug/netcoreapp2.0/TestApp.dll
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/bin/Debug/netcoreapp2.0/TestApp.pdb
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.csprojResolveAssemblyReference.cache
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.csproj.CoreCompileInputs.cache
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.AssemblyInfoInputs.cache
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.AssemblyInfo.cs
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.dll
+/Users/iolaleye/Documents/coding-bootcamp-activities/class-activities/apr-26/C#/01-Activities/TestApp/obj/Debug/netcoreapp2.0/TestApp.pdb

@@ -57,19 +57,29 @@ namespace Students
 
     private static int created = 0;
 
-    public Student ()
+    public Student (string fn, string ln, string mn, string emailAddress, string streetAddress, string phone)
     {
-      // TODO
+      this.firstName = fn;
+      this.lastName = ln;
+      this.middleName = mn;
+      this.email = emailAddress;
+      this.phoneNumber = phone;
+
+      Studen.created += 1;
     }
 
     public void PrintAttributes ()
     {
-      // TODO
+      Console.WriteLine("The student's first name is " + this.firstName);
+      Console.WriteLine("The student's last name is " + this.lastName);
+      Console.WriteLine("The student's middle name is " + this.middleName);
+      Console.WriteLine("The student's email is " + this.email);
+      Console.WriteLine("The student's phoneNumber is " + this.phoneNumber);
     }
 
     public int GetCreated ()
     {
-      // TODO
+      Console.WriteLine("There are " + Student.created + "students.")
     }
 
   }

@@ -21,3 +21,12 @@ __C#__
 
 __Standard Library__
 * use "using" keyword to bring in System "namespace" in order to use Console
+
+__dotnet__
+* dotnet new mvc -o <name-of-app>
+* cd <name-of-app>
+* dotnet run
+
+__cshtml__
+* razeor
+* html in a c# file
