@@ -2,6 +2,16 @@
     ViewData["Title"] = "About";
 }
 <h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<h3>
+    @{
+        bool isUserNameAbsent = String.IsNullOrEmpty((String)ViewData["name"]);
+        if (isUserNameAbsent) {
+            @:Welcome!
+        } else {
+            @:"Thanks for registering, @ViewData["name"]. Your email is @ViewData["email"]
+        }
+    }
+    @ViewData["Message"];
+</h3>
 
 <p>Use this area to provide additional information.</p>

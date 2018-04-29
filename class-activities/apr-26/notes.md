@@ -30,3 +30,7 @@ __dotnet__
 __cshtml__
 * razeor
 * html in a c# file
+
+__LinQ__
+* IEnumberable 
+    - something you can loop over

@@ -15,9 +15,19 @@ namespace TestApp.Controllers
             return View();
         }
 
-        public IActionResult About()
+        // [HttpPost] //post route
+        // public IActionResult HandleFormSubmission () {
+        //     return View();
+        // }
+
+        // [Route("About")] //get route
+
+        public IActionResult About(string name, string email) //you can pass these variables in the routes 'localhost:5000/Home/About/name=Abby&&email=example@email.com'
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["name"] = name;
+            ViewData["email"] = email;
+            
+            // ViewData["Message"] = "Thanks for registering" + name + " Your email is " + email;
 
             return View();
         }
