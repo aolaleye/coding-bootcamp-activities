@@ -65,3 +65,4 @@ class LinkedList {
 var list = new LinkedList([1, 2, 3, 4]);
 // Note the recursive calls to toString().
 console.log(list.first.toString());
+
