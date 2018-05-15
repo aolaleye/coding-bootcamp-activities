@@ -7,3 +7,4 @@ for (i=0; i < stuff.length; i++) {
         alert(i + ": " + random_value);
     }
 }
+
