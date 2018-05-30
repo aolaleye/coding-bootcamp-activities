@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="440px" viewBox="0 0 480 440" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Diagram">
+            <ellipse id="Todo-Bubble-Right" fill="#0277BD" cx="300" cy="380" rx="60" ry="60"></ellipse>
+            <text id="Todo" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="270" y="387">Todo</tspan>
+            </text>
+            <ellipse id="Todo-Bubble-Left" fill="#0277BD" cx="60" cy="380" rx="60" ry="60"></ellipse>
+            <text id="Todo" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="30" y="387">Todo</tspan>
+            </text>
+            <circle id="User-Bubble" fill="#0277BD" cx="420" cy="220" r="60"></circle>
+            <text id="User" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="392.304" y="227">User</tspan>
+            </text>
+            <circle id="App-Bubble" fill="#0277BD" cx="300" cy="60" r="60"></circle>
+            <text id="App" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="274.26" y="67">App</tspan>
+            </text>
+            <path d="M222.5,166.5 L255.5,108.5" id="Line" stroke="#0277BD" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M102.5,326.5 L135.5,268.5" id="Line-Copy-2" stroke="#0277BD" stroke-width="2" stroke-linecap="square"></path>
+            <path d="M224.5,326.5 L257.5,268.5" id="Line-Copy-4" stroke="#0277BD" stroke-width="2" stroke-linecap="square" transform="translate(241.000000, 297.500000) scale(-1, 1) translate(-241.000000, -297.500000) "></path>
+            <path d="M344.5,166.5 L377.5,108.5" id="Line-Copy" stroke="#0277BD" stroke-width="2" stroke-linecap="square" transform="translate(361.000000, 137.500000) scale(-1, 1) translate(-361.000000, -137.500000) "></path>
+            <ellipse id="Todos-Bubble" fill="#0277BD" cx="180" cy="220" rx="60" ry="60"></ellipse>
+            <text id="Todos" font-family="Montserrat-Bold, Montserrat" font-size="24" font-weight="bold" fill="#FFFFFF">
+                <tspan x="143" y="226">Todos</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
